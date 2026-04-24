@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
 
+        <!-- PERSONAL DETAILS SCREEN -->
+        <activity android:name=".PersonalDetailsActivity" />
+
         <!-- ORDER SUMMARY SCREEN -->
         <activity android:name=".OrderSummaryActivity" />
 

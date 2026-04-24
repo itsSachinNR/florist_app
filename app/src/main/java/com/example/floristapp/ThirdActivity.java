@@ -31,7 +31,6 @@ public class ThirdActivity extends AppCompatActivity {
         String phone = getIntent().getStringExtra("phone");
         String email = getIntent().getStringExtra("email");
         String address = getIntent().getStringExtra("address");
-        String addressType = getIntent().getStringExtra("addressType");
 
         StringBuilder bill = new StringBuilder();
         bill.append("Billing Details\n\n");
@@ -58,7 +57,6 @@ public class ThirdActivity extends AppCompatActivity {
         bill.append("Name: ").append(name != null ? name : "-").append("\n");
         bill.append("Phone: ").append(phone != null ? phone : "-").append("\n");
         bill.append("Email: ").append(email != null ? email : "-").append("\n");
-        bill.append("Address Type: ").append(addressType != null ? addressType : "-").append("\n");
         bill.append("Address: ").append(address != null ? address : "-").append("\n");
 
         billText.setText(bill.toString());

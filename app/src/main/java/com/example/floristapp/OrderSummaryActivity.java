@@ -70,7 +70,6 @@ public class OrderSummaryActivity extends AppCompatActivity {
             intent.putExtra("phone", getIntent().getStringExtra("phone"));
             intent.putExtra("email", getIntent().getStringExtra("email"));
             intent.putExtra("address", getIntent().getStringExtra("address"));
-            intent.putExtra("addressType", getIntent().getStringExtra("addressType"));
 
             startActivity(intent);
         });

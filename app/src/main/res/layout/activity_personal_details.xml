@@ -141,33 +141,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <RadioGroup
-                android:id="@+id/addressTypeGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/homeRb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Home" />
-
-                <RadioButton
-                    android:id="@+id/officeRb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Office" />
-
-                <RadioButton
-                    android:id="@+id/otherRb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Other" />
-            </RadioGroup>
-
+            
         </LinearLayout>
 
         <Button

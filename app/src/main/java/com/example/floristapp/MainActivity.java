@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                Intent intent = new Intent(MainActivity.this, OrderSummaryActivity.class);
+                Intent intent = new Intent(MainActivity.this, PersonalDetailsActivity.class);
                 intent.putExtra("roses", roses);
                 intent.putExtra("lilies", lilies);
                 intent.putExtra("tulips", tulips);

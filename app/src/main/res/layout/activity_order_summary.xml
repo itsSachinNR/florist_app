@@ -50,7 +50,7 @@
                 android:id="@+id/summaryText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="6dp"
+                android:lineSpacingExtra="8dp"
                 android:textColor="#5B2140"
                 android:textSize="18sp"
                 android:textStyle="bold" />

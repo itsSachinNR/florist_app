@@ -132,15 +132,6 @@
                 android:padding="12dp"
                 android:textColor="#000000"
                 android:textColorHint="#888888" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Address Type"
-                android:textColor="#5B2140"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
             
         </LinearLayout>
 

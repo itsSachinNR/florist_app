@@ -65,7 +65,22 @@ public class OrderSummaryActivity extends AppCompatActivity {
             intent.putExtra("lilies", lilies);
             intent.putExtra("tulips", tulips);
             intent.putExtra("total", total);
+
+            intent.putExtra("name", getIntent().getStringExtra("name"));
+            intent.putExtra("phone", getIntent().getStringExtra("phone"));
+            intent.putExtra("email", getIntent().getStringExtra("email"));
+            intent.putExtra("address", getIntent().getStringExtra("address"));
+            intent.putExtra("addressType", getIntent().getStringExtra("addressType"));
+
             startActivity(intent);
         });
+
+        Button backBtn = findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(v -> finish());
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

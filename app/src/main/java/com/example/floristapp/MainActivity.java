@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 int total = calculateTotal();
 
                 if (total == 0) {
-                    Toast.makeText(MainActivity.this, "Please select at least one flower", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,
+                            "Please select at least one flower",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -64,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void removeRose(View view) {
-        if (roses > 0) roses--;
+        if (roses > 0) {
+            roses--;
+        }
         updateUI();
     }
 
@@ -74,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void removeLily(View view) {
-        if (lilies > 0) lilies--;
+        if (lilies > 0) {
+            lilies--;
+        }
         updateUI();
     }
 
@@ -84,7 +90,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void removeTulip(View view) {
-        if (tulips > 0) tulips--;
+        if (tulips > 0) {
+            tulips--;
+        }
         updateUI();
     }
 

@@ -1,249 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_screen">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="20dp">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:paddingBottom="6dp"
             android:text="Bloomify"
             android:textColor="#7A2E4D"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="18dp"
+            android:layout_marginTop="8dp"
             android:text="Simple flower ordering app"
             android:textColor="#8B5E74"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- ROSES -->
+        <TextView
+            android:id="@+id/roseText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            android:background="@drawable/bg_card"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_marginTop="24dp"
+            android:text="Roses - ₹100"
+            android:textColor="#5B2140"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Roses"
-                android:textColor="#5B2140"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/removeRose"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button_small"
+            android:backgroundTint="@null"
+            android:onClick="removeRose"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/roseText" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="₹100 each"
-                android:textColor="#7F6674"
-                android:textSize="14sp" />
+        <TextView
+            android:id="@+id/roseQty"
+            android:layout_width="50dp"
+            android:layout_height="68dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#5B2140"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/removeRose"
+            app:layout_constraintStart_toEndOf="@id/removeRose"
+            app:layout_constraintTop_toTopOf="@id/removeRose" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+        <Button
+            android:id="@+id/addRose"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_button_small"
+            android:backgroundTint="@null"
+            android:onClick="addRose"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/roseQty"
+            app:layout_constraintTop_toTopOf="@id/removeRose" />
 
-                <Button
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/bg_button_small"
-                    android:onClick="removeRose"
-                    android:text="-"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <TextView
-                    android:id="@+id/roseQty"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="#5B2140"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/bg_button_small"
-                    android:onClick="addRose"
-                    android:text="+"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- LILIES -->
+        <TextView
+            android:id="@+id/lilyText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            android:background="@drawable/bg_card"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_marginTop="26dp"
+            android:text="Lilies - ₹120"
+            android:textColor="#5B2140"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/removeRose" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lilies"
-                android:textColor="#5B2140"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/removeLily"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button_small"
+            android:backgroundTint="@null"
+            android:onClick="removeLily"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lilyText" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="₹120 each"
-                android:textColor="#7F6674"
-                android:textSize="14sp" />
+        <TextView
+            android:id="@+id/lilyQty"
+            android:layout_width="50dp"
+            android:layout_height="68dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#5B2140"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/removeLily"
+            app:layout_constraintStart_toEndOf="@id/removeLily"
+            app:layout_constraintTop_toTopOf="@id/removeLily" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+        <Button
+            android:id="@+id/addLily"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_button_small"
+            android:backgroundTint="@null"
+            android:onClick="addLily"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/lilyQty"
+            app:layout_constraintTop_toTopOf="@id/removeLily" />
 
-                <Button
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/bg_button_small"
-                    android:onClick="removeLily"
-                    android:text="-"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <TextView
-                    android:id="@+id/lilyQty"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="#5B2140"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/bg_button_small"
-                    android:onClick="addLily"
-                    android:text="+"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- TULIPS -->
+        <TextView
+            android:id="@+id/tulipText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            android:background="@drawable/bg_card"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_marginTop="26dp"
+            android:text="Tulips - ₹150"
+            android:textColor="#5B2140"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/removeLily" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tulips"
-                android:textColor="#5B2140"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/removeTulip"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button_small"
+            android:backgroundTint="@null"
+            android:onClick="removeTulip"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tulipText" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="₹150 each"
-                android:textColor="#7F6674"
-                android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tulipQty"
+            android:layout_width="50dp"
+            android:layout_height="68dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#5B2140"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/removeTulip"
+            app:layout_constraintStart_toEndOf="@id/removeTulip"
+            app:layout_constraintTop_toTopOf="@id/removeTulip" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <Button
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/bg_button_small"
-                    android:onClick="removeTulip"
-                    android:text="-"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <TextView
-                    android:id="@+id/tulipQty"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="#5B2140"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/bg_button_small"
-                    android:onClick="addTulip"
-                    android:text="+"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </LinearLayout>
-        </LinearLayout>
+        <Button
+            android:id="@+id/addTulip"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_button_small"
+            android:backgroundTint="@null"
+            android:onClick="addTulip"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tulipQty"
+            app:layout_constraintTop_toTopOf="@id/removeTulip" />
 
         <TextView
             android:id="@+id/totalText"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_total"
             android:gravity="center"
             android:padding="14dp"
-            android:background="@drawable/bg_total"
             android:text="Estimated Total: ₹0"
             android:textColor="#7A2E4D"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/removeTulip" />
 
         <Button
             android:id="@+id/orderBtn"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
             android:background="@drawable/bg_button_primary"
-            android:padding="14dp"
+            android:backgroundTint="@null"
+            android:onClick="orderNow"
+            android:padding="16dp"
             android:text="Place Order"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalText" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

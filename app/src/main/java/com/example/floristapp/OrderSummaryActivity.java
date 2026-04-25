@@ -2,6 +2,7 @@ package com.example.floristapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -78,6 +79,7 @@ public class OrderSummaryActivity extends AppCompatActivity {
         backBtn.setOnClickListener(v -> finish());
     }
 
+    @SuppressLint({"MissingSuperCall", "GestureBackNavigation"})
     @Override
     public void onBackPressed() {
         finish();
